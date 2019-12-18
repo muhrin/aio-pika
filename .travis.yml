@@ -1,0 +1,19 @@
+language: python
+cache: pip
+
+addons:
+  apt:
+    packages:
+      - rabbitmq-server
+
+python:
+  - 3.5
+  - 3.6
+
+install:
+  - pip install .[develop]
+
+script:
+  - py.test
+
+
