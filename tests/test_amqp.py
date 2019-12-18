@@ -15,5 +15,5 @@ class TestCase(BaseTestCase):
         await channel.declare_queue(
             'task_queue',
             exclusive=True,
-            arguments={'x-message-ttl': 66000}
+            arguments={'x-expires': 10000}
         )
